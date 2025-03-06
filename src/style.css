@@ -30,6 +30,8 @@ body {
   font-size: 1rem;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -49,28 +51,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-}
-
-.header__logo {
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  gap: 4px;
-}
-
-.header__logo-text {
-  color: var(--color-black);
-  font-size: 1.8rem;
-  font-weight: 300;
-}
-
-.header__logo-dot {
-  color: var(--color-purple);
-  width: 10px;
-  height: 10px;
-  border-radius: 1.5px;
-  background-color: var(--color-purple);
-  transform: translateY(5px);
 }
 
 .header__connect-button {
@@ -116,7 +96,7 @@ body {
     var(--color-purple-alpha) 100%
   );
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 12px solid #eee;
   display: flex;
   flex-direction: column;
@@ -126,11 +106,6 @@ body {
   padding-top: 1rem;
 }
 
-.main__card-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
 .main__card-image {
   width: 100%;
   max-width: 320px;
@@ -138,21 +113,27 @@ body {
 }
 
 .main__about {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.main__about-title {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .main__about-rocket {
   position: absolute;
   top: 0;
-  right: -500px;
+  right: -300px;
   z-index: -1;
 }
 
 .main__about-description {
-  font-size: 1.5rem; /* 36px */
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
@@ -180,4 +161,36 @@ body {
 
 .button:active {
   background-color: var(--color-purple-alpha);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  gap: 4px;
+}
+
+.logo__text {
+  color: var(--color-black);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.logo__dot {
+  color: var(--color-purple);
+  width: 10px;
+  height: 10px;
+  border-radius: 1.5px;
+  background-color: var(--color-purple);
+  transform: translateY(5px);
+}
+
+hr {
+  margin: none;
+  padding: none;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-purple);
+  border-radius: 1px;
 }
