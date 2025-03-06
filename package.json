@@ -1,0 +1,26 @@
+{
+  "name": "pro-girls-womensday",
+  "version": "1.0.0",
+  "description": "learning project for women day 2025",
+  "license": "ISC",
+  "author": "categoricalcat",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist",
+    "start": "npm run clean && npm run build && npm run dev"
+  },
+  "dependencies": {
+    "parcel": "^2.13.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "lmdb",
+      "msgpackr-extract"
+    ]
+  }
+}
